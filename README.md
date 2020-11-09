@@ -1,7 +1,7 @@
 Medusa 
 ===
 
-Демо: [Github Pages](https://selinairra.github.io/Spotify-Test-App)
+Демо: [Github Pages](https://selinairra.github.io/Spotify-Test-App/demo)
 
 Приложение просмотра сохраненных аудизаписей в личном аккаунте. Используется Web API Spotify. Тестовые данные для входа: `04ua5yrkwcplaz3vzoxwdph1s` / `123QWErty`.
 
@@ -20,7 +20,7 @@ Medusa
 ---
 `npm start`
 
-*NOTE:* В момент обратного редиректа со страницы  Sootify требуется в адресной строке заменить `localhost:3000` на ваш адрес, если он отличается.
+*NOTE:* Работает только со стандартным адресом `localhost:3000`.
 
 ***Структура:***
 
