@@ -1,0 +1,33 @@
+@import '../../../style/utils.scss';
+
+.container {
+    @include flex(center, center, row);
+    flex: 1;
+    max-width: 500px;
+    box-sizing: border-box;
+    margin: 0 40px;
+    border-bottom: 1px solid #D2D2D7;
+    &:focus-within {
+        background-color: white;
+        border: 1px solid #D2D2D7;
+        border-radius: 4px;
+    }
+    & > input {
+        border: 0;
+        padding: 4px;
+        width: 100%;
+        background-color: transparent;
+        outline: none;
+        min-width: 0;
+    }
+    & img {
+        width: 20px;
+        cursor: pointer;
+        margin-right: 4px;
+    }
+    @media all and (max-width: $mediaPoint2) {
+        margin-bottom: 28px;
+        flex: 0;
+        width: 90%;
+    }
+}

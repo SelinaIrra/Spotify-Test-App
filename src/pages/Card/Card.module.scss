@@ -1,0 +1,15 @@
+@import '../../style/utils.scss';
+
+.mainContainer {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    button {
+        margin: auto;
+    }
+}
+.content {
+    width: 100%;
+    @include flex(center, flex-start, row);
+    flex-wrap: wrap;
+}

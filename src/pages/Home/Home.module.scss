@@ -1,0 +1,20 @@
+@import '../../style/utils.scss';
+
+.content {
+    width: 80%;
+    height: 80%;
+    position: absolute;
+    box-sizing: border-box;
+    @include flex(flex-start, center, column);
+    background-color: rgba($color: #fff, $alpha: 0.7);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15), 0 10px 10px rgba(0,0,0,0.15);
+    @media all and (max-width: $mediaPoint) {
+        width: calc(100% - 40px);
+        height: calc(100% - 40px);
+      }
+}
+
+.container {
+  margin: 20px;
+  @include flex(center, center, row)
+}

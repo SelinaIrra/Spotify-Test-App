@@ -1,0 +1,25 @@
+@import '../../../style/utils.scss';
+
+.container {
+    @include flex(center, center, row);
+    flex-wrap: wrap;
+    figcaption {
+        font-size: 46px;
+    }
+    img {
+        border-radius: 50%;
+        object-fit: cover;
+    width: 200px;
+    height: 200px;
+    }
+    .information {
+        @include flex(center, flex-start, column);
+        margin: 20px;
+        li {
+            color: $mainColor2
+        }
+        li span {
+            color: #333
+        }
+    }
+}

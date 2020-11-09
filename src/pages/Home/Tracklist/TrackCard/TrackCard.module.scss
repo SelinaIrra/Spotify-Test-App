@@ -1,0 +1,53 @@
+@import '../../../../style/utils.scss';
+
+.container {
+    width: 220px;
+    height: 270px;
+    padding: 4px;
+    margin: 14px;
+    background-color: rgba($color: #fff, $alpha: 0.6);
+    border-radius: 4px;
+    @include flex(center, center, column);
+    & > span, strong {
+        margin-top: 10px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        text-align: center;
+        width: 100%;
+    }
+    .album {
+        position: relative;
+        height: 180px;
+        @include flex(center, center, row);
+        &:hover .audioDisk {
+            transform: translateX(80px) rotate(360deg);
+        }
+        .audioDisk,
+        .disk {
+            @include audioDisk(150px, 150px);
+        }
+        .audioDisk {
+            -o-transition: all 0.5s ease-in-out;
+            -moz-transition: all 0.5s ease-in-out;
+            -webkit-transition: all 0.5s ease-in-out;
+            transition: all 0.5s ease-in-out;
+        }
+        img {
+            position: absolute;
+            z-index: 1;
+        }
+    }
+    audio {
+        display: none;
+    }
+    .noSound {
+        background-image: url(../../../../style/media/mute.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: rgba($color: #000000, $alpha: 0.3);
+        width: 180px;
+        height: 180px;
+        z-index: 2;
+    }
+}

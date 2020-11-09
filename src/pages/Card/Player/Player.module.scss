@@ -1,0 +1,92 @@
+@import '../../../style/utils.scss';
+
+@mixin playerBtn($url) {
+    background: $url;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    z-index: 1;
+    width: 32px;
+    height: 32px;
+}
+
+%liStyle {
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: 16px 17px;
+    padding-left: 24px;
+    list-style: none; 
+}
+
+@keyframes spin {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(360deg);}
+  }
+
+.container {
+@include flex(center, center, column);
+width: 100%;
+max-width: 600px;
+
+padding: 20px;
+box-sizing: border-box;
+background-color: rgba(255,255,255,0.6);
+border-radius: 4px;
+}
+
+.content {
+    margin: 20px;
+    padding: 0;
+    .track {
+        position: relative;
+        @include flex(flex-start, center, row);
+        flex-wrap: wrap;
+        margin: 10px;
+        margin-left: 0;
+        cursor: pointer;
+        outline: none;
+        &:hover {
+            border-bottom: 1px solid #ebebee;
+            transform: scale(1.05);
+        }
+    }
+    li {
+        @include flex(space-between, center, row);
+        width: 100%;
+    }
+    .play {
+        @extend %liStyle;
+        background-image: url(../../../style/media/pauseColor.png);
+    }
+    .stop {
+        @extend %liStyle;
+        background-image: url(../../../style/media/playColor.png);
+    }
+}
+
+.player {
+    position: relative;
+    @include flex(center, center, row);
+    width: 200px;
+    height: 200px;
+    .diskRotated, .disk {
+        @include audioDisk(200px, 200px);
+            -o-transition: all 0.5s ease-in-out;
+            -moz-transition: all 0.5s ease-in-out;
+            -webkit-transition: all 0.5s ease-in-out;
+            transition: all 0.5s ease-in-out;
+    }
+    .diskRotated {
+        animation: spin 5s linear 0s infinite;
+    }
+    audio {
+        display: none;
+    }
+    .playerPlay {
+        @include playerBtn(url(../../../style/media/pause.png));
+    }
+    .playerStop {
+        @include playerBtn(url(../../../style/media/play.png));
+        margin-left: 3px;
+    }
+}

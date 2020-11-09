@@ -1,0 +1,28 @@
+$background: #e9e9e9;
+$mainColor1: #54bdc2;
+$mainColor2: #24959d;
+$mediaPoint: 800px;
+$mediaPoint2: 540px;
+
+
+@mixin flex($justifyCnt, $alignItm, $direction) {
+    display: flex;
+    justify-content: $justifyCnt;
+    flex-direction: $direction;
+    align-items: $alignItm;
+}
+
+@mixin audioDisk($width, $height) {
+  position: absolute;
+    width: $width;
+    height: $height;
+    background-image: url(../style/media/disk.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 0;
+    position: absolute;
+}
+
+.noDisplay {
+  display: none;
+}

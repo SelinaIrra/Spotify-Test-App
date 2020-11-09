@@ -1,46 +1,60 @@
-# Getting Started with Create React App
+Medusa 
+===
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Приложение просмотра сохраненных аудизаписей в личном аккаунте. Используется Web API Spotify. Тестовые данные для входа: `04ua5yrkwcplaz3vzoxwdph1s` / `123QWErty`.
 
-## Available Scripts
+***Стек:***
 
-In the project directory, you can run:
+---
+- React
+- React hooks
+- Redux
+- Redux saga
+- axios
+- TypeScript
 
-### `npm start`
+***Запуск***
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+---
+`npm start`
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+*NOTE:* В момент обратного редиректа со страницы  Sootify требуется в адресной строке заменить `localhost:3000` на ваш адрес, если он отличается.
 
-### `npm test`
+***Структура:***
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
+> Набор общих, переиспользуемых компонентов (UI-кнопка, индикатор загрузки, хедер). Хедер содержит в себе компоненту поиска по названию и исполнителю среди сохраненных треков. 
 
-### `npm run build`
+- components
+    - Button
+    - Header
+        - Search
+    - Loader
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+> Константы используемые в приложении (ссылки, констаны отображения количества элементов на странице)
+- constants
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+> Пользовательские хуки (отслеживание изменения размера окна, авторизация + загрузка пользовательских данных)
+- hooks
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+> Страницы приложения. App - обертка (авторизация, подгрузка данных, лэйаут). Home - список треков (пагинация, поиск, воспроизведение при наведении на альбом). Card - карточка элемента (отображение информации по исполнителю, воспроизведение треков, возможность перехода в Spotify для полного прослушивания трека).
+- pages
+    - App
+    - Card
+        - ArtistCard
+        - Player
+    - Home
+        - Tracklist
+            - TrackCard
+> Хранилище данных, распределенное на несколько модулей по назначению: поиск (actions на получение информации об исполнителе в Spotify, получение списка треков по id и по исполнителю в Spotify, очищение сохраненных данных), общие параметры (actions на получение информации пользователя, установку индикатора загрузки на странице), отображемый треклист (actions на получение списка треков, создание справочника треков (требуется для поиска на главной странице, так как Spotify не предоставляет API для поиска среди сохраненных треков), установка сдвига для пагинации списка). 
+- redux
+    - modules
+        - search
+        - sesion
+        - tracklist
+> Общая стилистика и статика
+- style
+> Типы данных Spotify
+- types
+> Вспомогательные файлы (взаимодействие с API через axios)
+- utils
