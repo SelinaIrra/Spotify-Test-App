@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/static/css/main.30d9a773.chunk.css",
+    "main.js": "/static/js/main.fb84a8b5.chunk.js",
+    "main.js.map": "/static/js/main.fb84a8b5.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.c20cfe96.js",
+    "runtime-main.js.map": "/static/js/runtime-main.c20cfe96.js.map",
+    "static/css/2.a0cced97.chunk.css": "/static/css/2.a0cced97.chunk.css",
+    "static/js/2.f01f1d23.chunk.js": "/static/js/2.f01f1d23.chunk.js",
+    "static/js/2.f01f1d23.chunk.js.map": "/static/js/2.f01f1d23.chunk.js.map",
+    "static/js/3.39917a94.chunk.js": "/static/js/3.39917a94.chunk.js",
+    "static/js/3.39917a94.chunk.js.map": "/static/js/3.39917a94.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/2.a0cced97.chunk.css.map": "/static/css/2.a0cced97.chunk.css.map",
+    "static/css/main.30d9a773.chunk.css.map": "/static/css/main.30d9a773.chunk.css.map",
+    "static/js/2.f01f1d23.chunk.js.LICENSE.txt": "/static/js/2.f01f1d23.chunk.js.LICENSE.txt",
+    "static/media/TrackCard.module.scss": "/static/media/disk.f92f3b0f.png",
+    "static/media/App.module.scss": "/static/media/medusa.a23bdee6.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c20cfe96.js",
+    "static/css/2.a0cced97.chunk.css",
+    "static/js/2.f01f1d23.chunk.js",
+    "static/css/main.30d9a773.chunk.css",
+    "static/js/main.fb84a8b5.chunk.js"
+  ]
+}
