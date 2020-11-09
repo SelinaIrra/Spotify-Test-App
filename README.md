@@ -1,8 +1,6 @@
 Medusa 
 ===
 
-Демо: [Github Pages](https://selinairra.github.io/Spotify-Test-App/demo)
-
 Приложение просмотра сохраненных аудизаписей в личном аккаунте. Используется Web API Spotify. Тестовые данные для входа: `04ua5yrkwcplaz3vzoxwdph1s` / `123QWErty`.
 
 ***Стек:***
